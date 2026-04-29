@@ -166,18 +166,21 @@ function makePlanetParams(parent, params) {
         //If a planet has a lot of moons, draw a moon belt instead
         const manyMoons = params.moons > 12;
 
+        // Reuse one moon geometry/material per planet to reduce memory and shader churn.
+        const moonGeom = new THREE.SphereGeometry(1, 10, 10);
+        let moonMat;
+        if (params.moonTexture) {
+            const moonTex = new THREE.TextureLoader().load(params.moonTexture);
+            moonMat = new THREE.MeshPhongMaterial({ map: moonTex });
+        } else {
+            moonMat = new THREE.MeshPhongMaterial({ color: params.moonColor || 0x888888 });
+        }
+
         //If the moons are too big its hard to tell a moon apart from a planet
         const maxMoonRadius = 0.5;
         for (let i = 0; i < params.moons; i++) {
             let mr = Math.min(r * 0.25, maxMoonRadius); // Cap
             if (manyMoons) mr = Math.min(r * 0.12, 0.2); // smaller for belt look
-            const moonGeom = new THREE.SphereGeometry(1, 10, 10);
-            let moonMat;
-            if (params.moonTexture) {
-                moonMat = new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load(params.moonTexture) });
-            } else {
-                moonMat = new THREE.MeshPhongMaterial({ color: params.moonColor || 0x888888 });
-            }
             const moon = new THREE.Mesh(moonGeom, moonMat);
             moon.scale.set(mr, mr, mr);
             // Moons are in a circle around XZ plane.

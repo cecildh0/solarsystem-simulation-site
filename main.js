@@ -83,7 +83,7 @@ const saturnParams = {
     ringColor: 0x996633,
     ringTexture: "saturn_ring.png",
     ringTransparency: 1,
-    moons: 285,
+    moons: 60,
     moonColor: 0xaaaaaa,
     moonTexture: "moon.png",
     firey: false,
@@ -136,7 +136,7 @@ const jupiterParams = {
     ring: true, //will implement transparent ring later
     ringColor: 0x7a3e2b,
     ringTransparency: 0.15,
-    moons: 101,
+    moons: 40,
     moonColor: 0xaaaaaa,
     moonTexture: "moon.png",
     firey: false,
@@ -150,7 +150,7 @@ const uranusParams = {
     ring: true, //will implement transparent ring later
     ringColor: 0x2b2b2b,
     ringTransparency: 0.15,
-    moons: 28,
+    moons: 15,
     moonColor: 0xaaaaaa,
     moonTexture: "moon.png",
     firey: false,
@@ -164,7 +164,7 @@ const neptuneParams = {
     ring: true, //will implement transparent ring later
     ringColor: 0x3b2f2f,
     ringTransparency: 0.15,
-    moons: 16,
+    moons: 8,
     moonColor: 0xaaaaaa,
     moonTexture: "moon.png",
     firey: false,
