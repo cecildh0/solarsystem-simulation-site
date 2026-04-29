@@ -61,9 +61,9 @@ function makePlanetParams(parent, params) {
     
     if (params.firey) {
         // Fire particle effect from three-particle-fire 
-        const fireRadius = r * 0.06;     
+        const fireRadius = r * 2;     
         const fireHeight = r * 0.2;       
-        const particleCount = 20000;       
+        const particleCount = 1000;       
         
         const fireGeometry = new particleFire.Geometry(fireRadius, fireHeight, particleCount);
         const fireMaterial = new particleFire.Material(0xffefc4);
