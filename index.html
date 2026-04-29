@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS360 Final Project - Daniel Cecil</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #85A898;
+    }
+
+    header {
+      background-color: #85A898;
+      color: #EFF9E8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #658C6E;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    a:link,
+    a:visited {
+      color: #DFCD80;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a h3 {
+      color: #DFCD80;
+      font-weight: bold;
+    }
+
+    header h1 {
+      font-weight: 1000;
+      -webkit-text-stroke: 0.75px #EFF9E8;
+      text-shadow:
+        -0.75px -0.75px 0 #EFF9E8,
+         0.75px -0.75px 0 #EFF9E8,
+        -0.75px  0.75px 0 #EFF9E8,
+         0.75px  0.75px 0 #EFF9E8;
+    }
+    header h2 {
+      font-weight: 900;
+      -webkit-text-stroke: 0.75px #EFF9E8;
+      text-shadow:
+        -0.75px -0.75px 0 #EFF9E8,
+         0.75px -0.75px 0 #EFF9E8,
+        -0.75px  0.75px 0 #EFF9E8,
+         0.75px  0.75px 0 #EFF9E8;
+    }
+
+    footer {
+      background-color: #85A898;
+      color: #EFF9E8;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    section img {
+      max-width: 90%;
+      height: auto;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Solar System Simulation</h1>
+    <h2> Daniel Cecil </h2>
+    <a href="main.html"><h3>FINAL PROJECT DEMO</h3></a>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        This project is a recreation of the solar system, including the sun along with
+        every planet. Every planet is designed to revolve around the sun, along with having their own
+        moons constantly orbiting them. Additionally, the user can pause this rotation and control it
+        on their own by dragging around the Earth.
+      </p>
+      <h3>
+        Controls
+      </h3>
+      <ul>
+        <li> Press SPACE to pause/resume the simulation </li>
+        <li> When paused, hold SHIFT and drag the Earth with LEFT CLICK held to control simulation </li>
+        <li> Press X to toggle Pluto </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Details</h2>
+      <p>
+        This project showcases modelling, animation, lighting, texture-mapping, and interactivity (with picking) in three.js. 
+        The most complicated aspect of this project is the intersection between the automated animation, and the user-inputted 
+        interactions, both of which could dictate the movement of the planets. 
+      </p>
+    </section>
+
+    <section>
+      <h2>Future Plans</h2>
+      <p>
+        The biggest issue of this planet is the simple look of the sun. Outside of the heat effect, which is 
+        designed to only be visible from a distance, the sun looks quite simple up close and may benefit from some
+        simple animations in the future. Additionally, a more dynamic background could help to make this solar system
+        look a bit more realistic.
+      </p>
+    </section>
+    <section>
+      <h2>Gallery</h2>
+      <img src="gallery1.png" alt="View of planets">
+      <img src="gallery2.png" alt="Earth">
+      <img src="gallery3.png" alt="Zoomed out view, sun heat effect visible">
+    </section>
+  </main>
+
+</body>
+</html>
